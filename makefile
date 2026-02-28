@@ -28,8 +28,8 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
 
 $(TARGET): $(OBJ)
 	$(CC) $(OBJ) -o $@ $(LDFLAGS)
-	@echo "Build successful ✔"
-	@rm -f $(OBJ) $(DEP)   # 🔥 Delete .o and .d after linking
+	@echo "Build successful"
+	@rm -f $(OBJ) $(DEP)  
 
 -include $(DEP)
 
